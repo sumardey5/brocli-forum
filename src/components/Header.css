@@ -6,13 +6,37 @@
     border-bottom: 1px solid #ddd;
     display: flex;
     align-items: center;
-    justify-content: flex-start;  /* Default alignment */
+    justify-content: space-between; /* Adjusted for better alignment */
     position: absolute;
     top: 0;
     left: 240px;  /* Align it to the right of the sidebar */
     box-sizing: border-box;
     z-index: 1000;
     padding: 0 20px;
+}
+
+.search-container {
+    position: relative;
+    width: 30%;  /* Reduced width */
+    max-width: 300px; /* Ensures search bar doesn't get too large */
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 40px 10px 20px; /* Padding for internal spacing */
+    border: 1px solid #ccc;
+    border-radius: 30px; /* Rounded corners */
+    outline: none;
+}
+
+.search-button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .header-logo {
@@ -24,7 +48,7 @@
     .dashboard-header {
         width: 100%;  /* Full width for mobile view */
         left: 0;      /* Reset left position for mobile view */
-        justify-content: center;  /* Center the content in mobile view */
+        justify-content: space-between;  /* Adjusted for mobile view */
     }
 
     .header-logo {
@@ -32,5 +56,10 @@
         font-size: 24px;
         font-weight: bold;
         color: black;
+        padding-right: 20px; /* Ensure some space between logo and search */
+    }
+
+    .search-container {
+        width: 70%;  /* Adjust width for mobile */
     }
 }
