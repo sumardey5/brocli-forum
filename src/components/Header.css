@@ -1,65 +1,67 @@
 /* src/components/Header.css */
 .dashboard-header {
-    width: calc(100% - 240px);  /* Adjust width to not overlap with the sidebar */
+    width: calc(100% - 240px);
     height: 60px;
     background-color: white;
     border-bottom: 1px solid #ddd;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Adjusted for better alignment */
+    justify-content: center; /* Center everything in the header */
     position: absolute;
     top: 0;
-    left: 240px;  /* Align it to the right of the sidebar */
+    left: 240px;
     box-sizing: border-box;
     z-index: 1000;
     padding: 0 20px;
-}
-
-.search-container {
-    position: relative;
-    width: 30%;  /* Reduced width */
-    max-width: 300px; /* Ensures search bar doesn't get too large */
-}
-
-.search-input {
-    width: 100%;
-    padding: 10px 40px 10px 20px; /* Padding for internal spacing */
-    border: 1px solid #ccc;
-    border-radius: 30px; /* Rounded corners */
-    outline: none;
-}
-
-.search-button {
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
 }
 
 .header-logo {
     display: none;  /* Hidden on desktop view */
 }
 
-/* Mobile view */
+.search-bar {
+    flex-grow: 1;
+    max-width: 400px; /* Limit the search bar width */
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Rounded corners */
+    outline: none;
+    font-size: 16px;
+}
+
+.search-button {
+    padding: 8px 15px;
+    background-color: #4CAF50; /* A pleasant green */
+    color: white;
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+/* Adjustments for mobile view */
 @media (max-width: 768px) {
     .dashboard-header {
-        width: 100%;  /* Full width for mobile view */
-        left: 0;      /* Reset left position for mobile view */
-        justify-content: space-between;  /* Adjusted for mobile view */
+        width: 100%;
+        left: 0;
+        justify-content: space-between; /* Space out the elements */
     }
 
     .header-logo {
-        display: block;  /* Show the logo only on mobile view */
+        display: block;
+        margin-left: 10px;
         font-size: 24px;
         font-weight: bold;
         color: black;
-        padding-right: 20px; /* Ensure some space between logo and search */
     }
 
-    .search-container {
-        width: 70%;  /* Adjust width for mobile */
+    .search-bar {
+        flex-grow: 1;
+        margin: 0 10px; /* Spacing on mobile */
+    }
+
+    .search-button {
+        margin-right: 10px;
     }
 }
