@@ -1,0 +1,14 @@
+/* src/App.css */
+.app-container {
+  display: flex;
+}
+
+.sidebar {
+  position: relative;
+  z-index: 1001; /* Ensure it stays above the header */
+}
+
+.main-content {
+  flex-grow: 1;
+  margin-top: 60px; /* Push content down to accommodate the header */
+}

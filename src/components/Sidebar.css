@@ -1,0 +1,105 @@
+/* Desktop Sidebar */
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.sidebar-logo {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    height: 60px;  /* Match the header height */
+    line-height: 60px; /* Align text vertically */
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 0;  /* Remove unnecessary margin */
+}
+
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;  /* Space between logo and items */
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+    margin: 5px 0;
+}
+
+.sidebar-item:hover {
+    background-color: #f0f4f8;
+    border-left: 3px solid #3b82f6; /* Blue border on hover */
+    color: #3b82f6;
+}
+
+.sidebar-item-icon {
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+/* Active sidebar item */
+.sidebar-item-active {
+    background-color: #f0f4f8;
+    border-left: 3px solid #3b82f6;
+    color: #3b82f6;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+        border-top: 1px solid #ddd;
+        border-right: none;
+    }
+
+    .sidebar-logo {
+        display: none; /* Hide logo in mobile view */
+    }
+
+    .sidebar-container {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .sidebar-item {
+        flex: 1;
+        justify-content: center;
+        padding: 10px 0;
+        border-left: none;
+        font-size: 12px;
+        background-color: transparent;
+    }
+
+    .sidebar-item-icon {
+        margin-right: 0;
+        font-size: 18px;
+    }
+
+    .sidebar-item span {
+        display: none; /* Hide text on mobile */
+    }
+}

@@ -1,0 +1,36 @@
+/* src/components/Header.css */
+.dashboard-header {
+    width: calc(100% - 240px);  /* Adjust width to not overlap with the sidebar */
+    height: 60px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;  /* Default alignment */
+    position: absolute;
+    top: 0;
+    left: 240px;  /* Align it to the right of the sidebar */
+    box-sizing: border-box;
+    z-index: 1000;
+    padding: 0 20px;
+}
+
+.header-logo {
+    display: none;  /* Hidden on desktop view */
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .dashboard-header {
+        width: 100%;  /* Full width for mobile view */
+        left: 0;      /* Reset left position for mobile view */
+        justify-content: center;  /* Center the content in mobile view */
+    }
+
+    .header-logo {
+        display: block;  /* Show the logo only on mobile view */
+        font-size: 24px;
+        font-weight: bold;
+        color: black;
+    }
+}
