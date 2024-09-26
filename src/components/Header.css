@@ -40,28 +40,33 @@
     margin-left: 10px;
 }
 
-/* Adjustments for mobile view */
 @media (max-width: 768px) {
     .dashboard-header {
+        position: fixed;
+        top: 0;
         width: 100%;
-        left: 0;
-        justify-content: space-between; /* Space out the elements */
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        background-color: white;
+        border-bottom: 1px solid #ddd;
+        box-sizing: border-box;
     }
 
     .header-logo {
         display: block;
-        margin-left: 10px;
-        font-size: 24px;
-        font-weight: bold;
-        color: black;
+        margin-right: auto;  /* Keeps logo on the left */
     }
 
     .search-bar {
-        flex-grow: 1;
-        margin: 0 10px; /* Spacing on mobile */
+        flex: 1;  /* Allows search bar to fill available space */
+        margin-left: 10px; /* Ensures spacing from the logo */
+        margin-right: 10px; /* Spacing from search button */
     }
 
     .search-button {
-        margin-right: 10px;
+        margin-left: 10px; /* Spacing from search bar */
     }
 }

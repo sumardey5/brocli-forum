@@ -1,14 +1,14 @@
 /* src/App.css */
 .app-container {
   display: flex;
-}
-
-.sidebar {
-  position: relative;
-  z-index: 1001; /* Ensure it stays above the header */
+  flex-direction: column;
+  min-height: 100vh;  /* Ensure full viewport height */
+  overflow: hidden;  /* Avoid unnecessary scrolling */
 }
 
 .main-content {
-  flex-grow: 1;
-  margin-top: 60px; /* Push content down to accommodate the header */
+  flex: 1;
+  padding-top: 60px;  /* Space for header */
+  padding-bottom: 60px;  /* Space for footer/docked bar */
+  overflow-y: auto;  /* Scrollable content area */
 }
