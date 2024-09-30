@@ -6,7 +6,13 @@ const TopSection = () => {
     const highlights = [
         { title: 'Top Discussion', description: 'Explore engaging topics!' },
         { title: 'Upcoming Event', description: 'Don’t miss our next event!' },
+        { title: 'New Group', description: 'Join our new book lovers group!' },
+        { title: 'New Group', description: 'Join our new book lovers group!' },
+        { title: 'Top Discussion', description: 'Explore engaging topics!' },
+        { title: 'Upcoming Event', description: 'Don’t miss our next event!' },
+        { title: 'New Group', description: 'Join our new book lovers group!' },
         { title: 'New Group', description: 'Join our new book lovers group!' }
+
     ];
 
     return (
