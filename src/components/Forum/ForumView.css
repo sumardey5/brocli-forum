@@ -1,0 +1,38 @@
+/* src/components/Forum.css */
+.forum {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 10px;
+    
+}
+
+.forum-topic {
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.forum-topic h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.forum-topic p {
+    color: #666;
+}
+
+.forum-topic small {
+    color: #999;
+}
+
+@media (max-width: 768px) {
+    .forum {
+        margin: 10px;
+    }
+    .forum-topic {
+        padding: 10px;
+    }
+}
